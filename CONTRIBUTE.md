@@ -23,14 +23,52 @@ or navigate to the respective folder and `yarn add <package>`
 
 ### From terminal
 
-1. `git fetch upstream`
-2. `git checkout main` if not already on main branch
-   `git merge upstream/main`
-3. `git push origin main` to update the forked repo
+**1.** If anyone contribute to this repository, then the changes will not reflect in your local repository. For that:
+
+**2.** Setup a reference(remote) to the original repository to get all the changes from the remote.
+
+```
+   git remote add upstream https://github.com/webdev-20/TLL-hacktoberfest-2022.git
+```
+
+**3.** Check the remotes for this repository.
+
+```
+   git remote -v
+```
+
+**4.** Fetching from the remote repository will bring in its branches and their respective commits.
+
+```
+   git fetch upstream
+```
+
+**5.** Make sure that you're on your main branch.
+
+```
+   git checkout main
+```
+
+**6.** Now that we have fetched the upstream repository, we want to merge its changes into our local branch. This will bring that branch into sync with the upstream, without losing our local changes.
+
+```
+   git merge upstream/main
+```
+
+**7.** Or you can club step 4th and 6th together using:-
+
+```
+   git pull upstream main
+```
 
 ### From github website
 
 [![](https://i.imgur.com/7eLUTJQm.jpg)](https://i.imgur.com/7eLUTJQ.png)
+
+Update the branch and then go to the project folder in terminal and pull the changes to your local repository
+```
+   git pull
+```
 
 # Creating a Pull Request
 
